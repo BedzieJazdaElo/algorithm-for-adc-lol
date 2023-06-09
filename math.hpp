@@ -19,13 +19,13 @@ inline unit outputAttackSpeed(short unsigned int level, unit bonus_AttackSpeed, 
     return base_AS + (AS_ratio + ((AS_PerLevel * (level - 1) * (0.7025 + 0.0175 * (level - 1))) + bonus_AttackSpeed));
 }
 
-class mVector
+class productVector
 {
 protected:
     std::vector<unit> v;
 
 public:
-    mVector(unit a) { v.push_back(a); }
+    productVector(unit a) { v.push_back(a); }
     unit returnProduct()
     {
         unit product = 1;
@@ -36,4 +36,11 @@ public:
         return product;
     }
     void push(unit a) { v.push_back(a); }
+};
+
+class sumVector
+{
+protected:
+    std::vector<unit> v;
+    
 };
